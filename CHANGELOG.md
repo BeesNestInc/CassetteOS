@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
-## [Unreleased]
+## [v0.4.15-cs1.2.0]
 ### Changed
 - Switched version update check to custom CassetteOS update server.
 - Replaced version comparison logic to support custom versioning scheme (e.g. v0.4.18-cs1.0.0).
