@@ -7,17 +7,17 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/mayumigit/CasaOS-Common/utils/common_err"
-	"github.com/mayumigit/CasaOS-Common/utils/logger"
-	sshHelper "github.com/mayumigit/CasaOS-Common/utils/ssh"
-	"github.com/mayumigit/CasaOS/pkg/utils"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/common_err"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/logger"
+	sshHelper "github.com/BeesNestInc/CassetteOS-Common/utils/ssh"
+	"github.com/BeesNestInc/CassetteOS/pkg/utils"
 	"github.com/labstack/echo/v4"
 
 	"github.com/gorilla/websocket"
 	"go.uber.org/zap"
 	"golang.org/x/crypto/ssh"
 
-	modelCommon "github.com/mayumigit/CasaOS-Common/model"
+	modelCommon "github.com/BeesNestInc/CassetteOS-Common/model"
 )
 
 var upgrader = websocket.Upgrader{

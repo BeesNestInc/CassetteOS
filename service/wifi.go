@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/mayumigit/CasaOS-Common/utils/command"
-	"github.com/mayumigit/CasaOS/pkg/config"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/command"
+	"github.com/BeesNestInc/CassetteOS/pkg/config"
 	"os/exec"
 	"strings"
 	//"errors"

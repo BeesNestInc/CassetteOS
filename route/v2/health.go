@@ -6,9 +6,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/mayumigit/CasaOS/codegen"
-	"github.com/mayumigit/CasaOS/pkg/utils/file"
-	"github.com/mayumigit/CasaOS/service"
+	"github.com/BeesNestInc/CassetteOS/codegen"
+	"github.com/BeesNestInc/CassetteOS/pkg/utils/file"
+	"github.com/BeesNestInc/CassetteOS/service"
 	"github.com/labstack/echo/v4"
 	"github.com/mholt/archiver/v3"
 )

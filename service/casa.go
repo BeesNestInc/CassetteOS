@@ -4,9 +4,9 @@ import (
 	json2 "encoding/json"
 	"time"
 
-	"github.com/mayumigit/CasaOS/model"
-	"github.com/mayumigit/CasaOS/pkg/config"
-	"github.com/mayumigit/CasaOS/pkg/utils/httper"
+	"github.com/BeesNestInc/CassetteOS/model"
+	"github.com/BeesNestInc/CassetteOS/pkg/config"
+	"github.com/BeesNestInc/CassetteOS/pkg/utils/httper"
 	"github.com/tidwall/gjson"
 )
 

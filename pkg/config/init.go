@@ -16,9 +16,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/mayumigit/CasaOS-Common/utils/constants"
-	"github.com/mayumigit/CasaOS/common"
-	"github.com/mayumigit/CasaOS/model"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/constants"
+	"github.com/BeesNestInc/CassetteOS/common"
+	"github.com/BeesNestInc/CassetteOS/model"
 	"github.com/go-ini/ini"
 )
 

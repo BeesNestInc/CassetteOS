@@ -1,7 +1,7 @@
 package common
 
 import (
-	"github.com/mayumigit/CasaOS/codegen/message_bus"
+	"github.com/BeesNestInc/CassetteOS/codegen/message_bus"
 )
 
 // devtype -> action -> event

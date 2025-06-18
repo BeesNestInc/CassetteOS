@@ -13,8 +13,8 @@ package service
 import (
 	"fmt"
 
-	"github.com/mayumigit/CasaOS/service/model"
-	model2 "github.com/mayumigit/CasaOS/service/model"
+	"github.com/BeesNestInc/CassetteOS/service/model"
+	model2 "github.com/BeesNestInc/CassetteOS/service/model"
 	"github.com/moby/sys/mount"
 	"golang.org/x/sys/unix"
 	"gorm.io/gorm"

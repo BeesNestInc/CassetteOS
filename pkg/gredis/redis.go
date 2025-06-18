@@ -3,7 +3,7 @@ package gredis
 import (
 	"time"
 
-	"github.com/mayumigit/CasaOS/model"
+	"github.com/BeesNestInc/CassetteOS/model"
 	"github.com/gomodule/redigo/redis"
 )
 

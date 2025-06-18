@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/mayumigit/CasaOS-Common/utils/port"
-	"github.com/mayumigit/CasaOS-Common/utils/systemctl"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/port"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/systemctl"
 )
 
 type HealthService interface {

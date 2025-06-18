@@ -1,11 +1,11 @@
 package v1
 
 import (
-	"github.com/mayumigit/CasaOS-Common/utils/common_err"
-	"github.com/mayumigit/CasaOS/drivers/dropbox"
-	"github.com/mayumigit/CasaOS/drivers/google_drive"
-	"github.com/mayumigit/CasaOS/drivers/onedrive"
-	"github.com/mayumigit/CasaOS/model"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/common_err"
+	"github.com/BeesNestInc/CassetteOS/drivers/dropbox"
+	"github.com/BeesNestInc/CassetteOS/drivers/google_drive"
+	"github.com/BeesNestInc/CassetteOS/drivers/onedrive"
+	"github.com/BeesNestInc/CassetteOS/model"
 	"github.com/labstack/echo/v4"
 )
 

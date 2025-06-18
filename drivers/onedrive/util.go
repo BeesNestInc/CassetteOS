@@ -4,9 +4,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/mayumigit/CasaOS-Common/utils/logger"
-	"github.com/mayumigit/CasaOS/drivers/base"
-	"github.com/mayumigit/CasaOS/pkg/utils"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/logger"
+	"github.com/BeesNestInc/CassetteOS/drivers/base"
+	"github.com/BeesNestInc/CassetteOS/pkg/utils"
 	"go.uber.org/zap"
 )
 

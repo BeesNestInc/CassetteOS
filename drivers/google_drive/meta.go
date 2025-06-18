@@ -1,7 +1,7 @@
 package google_drive
 
 import (
-	"github.com/mayumigit/CasaOS/internal/driver"
+	"github.com/BeesNestInc/CassetteOS/internal/driver"
 )
 
 const ICONURL = "./img/driver/GoogleDrive.svg"

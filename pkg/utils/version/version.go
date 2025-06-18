@@ -14,8 +14,8 @@ import (
 	"strconv"
 	"strings"
 	"fmt"
-	"github.com/mayumigit/CasaOS/common"
-	"github.com/mayumigit/CasaOS/model"
+	"github.com/BeesNestInc/CassetteOS/common"
+	"github.com/BeesNestInc/CassetteOS/model"
 )
 func ParseFullVersion(ver string) ([]int, error) {
 	// 例: "v0.4.18-cs1.0.0"

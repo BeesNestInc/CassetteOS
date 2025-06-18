@@ -3,9 +3,9 @@ package v1
 import (
 	"fmt"
 
-	"github.com/mayumigit/CasaOS/model"
-	"github.com/mayumigit/CasaOS/pkg/utils/common_err"
-	"github.com/mayumigit/CasaOS/service"
+	"github.com/BeesNestInc/CassetteOS/model"
+	"github.com/BeesNestInc/CassetteOS/pkg/utils/common_err"
+	"github.com/BeesNestInc/CassetteOS/service"
 	"github.com/labstack/echo/v4"
 )
 

@@ -3,7 +3,7 @@
  * @Date: 2022-07-15 10:43:00
  * @LastEditors: LinkLeong
  * @LastEditTime: 2022-07-15 10:56:17
- * @FilePath: /CasaOS/model/notify/storage.go
+ * @FilePath: /CassetteOS/model/notify/storage.go
  * @Description:
  * @Website: https://www.casaos.io
  * Copyright (c) 2022 by icewhale, All Rights Reserved.

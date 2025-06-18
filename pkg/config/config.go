@@ -13,7 +13,7 @@ package config
 import (
 	"path/filepath"
 
-	"github.com/mayumigit/CasaOS-Common/utils/constants"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/constants"
 )
 
 var CasaOSConfigFilePath = filepath.Join(constants.DefaultConfigPath, "casaos.conf")
