@@ -16,10 +16,10 @@ log "切り替え開始: ${MODE} モード"
 if [ "$MODE" == "client" ]; then
     log "▶ Switching to client mode..."
 
-    /usr/share/casaos/shell/setup-wifi-client.sh "$SSID" "$PASSWORD"
+    /usr/share/cassetteos/shell/setup-wifi-client.sh "$SSID" "$PASSWORD"
     if [ $? -ne 0 ]; then
         log "❌ Client setup failed — fallback to AP mode"
-        /usr/share/casaos/shell/setup-ap.sh || {
+        /usr/share/cassetteos/shell/setup-ap.sh || {
             log "❌ AP fallback also failed"
             exit 1
         }
@@ -37,13 +37,13 @@ if [ "$MODE" == "client" ]; then
 
     log "fallbackでAPモードへ切り替え"
     log "❌ Wi-Fi connected but no internet. Switching to AP mode..."
-    /usr/share/casaos/shell/setup-ap.sh
+    /usr/share/cassetteos/shell/setup-ap.sh
     exit 0
 
 elif [ "$MODE" == "ap" ]; then
     log "▶ Switching to AP mode..."
 
-    /usr/share/casaos/shell/setup-ap.sh
+    /usr/share/cassetteos/shell/setup-ap.sh
     log "APモード設定完了"
     exit 0
 

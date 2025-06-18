@@ -16,4 +16,4 @@ import (
 	"github.com/BeesNestInc/CassetteOS-Common/utils/constants"
 )
 
-var CasaOSConfigFilePath = filepath.Join(constants.DefaultConfigPath, "casaos.conf")
+var CasaOSConfigFilePath = filepath.Join(constants.DefaultConfigPath, "cassetteos.conf")

@@ -1,4 +1,4 @@
-//go:generate bash -c "mkdir -p codegen && go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.12.4 -generate types,server,spec -package codegen api/casaos/openapi.yaml > codegen/casaos_api.go"
+//go:generate bash -c "mkdir -p codegen && go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.12.4 -generate types,server,spec -package codegen api/cassetteos/openapi.yaml > codegen/cassetteos_api.go"
 //go:generate bash -c "mkdir -p codegen/message_bus && go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.12.4 -generate types,client -package message_bus https://raw.githubusercontent.com/BeesNestInc/CassetteOS-MessageBus/main/api/message_bus/openapi.yaml > codegen/message_bus/api.go"
 package main
 
@@ -44,10 +44,10 @@ var (
 	//go:embed api/index.html
 	_docHTML string
 
-	//go:embed api/casaos/openapi.yaml
+	//go:embed api/cassetteos/openapi.yaml
 	_docYAML string
 
-	//go:embed build/sysroot/etc/casaos/casaos.conf.sample
+	//go:embed build/sysroot/etc/cassetteos/cassetteos.conf.sample
 	_confSample string
 
 	configFlag  = flag.String("c", "", "config address")

@@ -12,7 +12,7 @@
 
 set -e
 
-readonly APP_NAME_SHORT=casaos
+readonly APP_NAME_SHORT=cassetteos
 
 __get_setup_script_directory_by_os_release() {
 	pushd "$(dirname "${BASH_SOURCE[0]}")/../service.d/${APP_NAME_SHORT}" &>/dev/null

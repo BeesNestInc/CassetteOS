@@ -25,7 +25,7 @@ import (
 )
 
 const (
-	casaosServiceName = "casaos.service"
+	casaosServiceName = "cassetteos.service"
 )
 
 var (
