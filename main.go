@@ -53,12 +53,18 @@ var (
 	configFlag  = flag.String("c", "", "config address")
 	dbFlag      = flag.String("db", "", "db path")
 	versionFlag = flag.Bool("v", false, "version")
+	Version string
+	Commit  string
+	Date    string
 )
 
 func init() {
 	flag.Parse()
 	if *versionFlag {
 		fmt.Println("v" + common.VERSION)
+		fmt.Printf("Version: %s\n", Version)
+		fmt.Printf("Commit:  %s\n", Commit)
+		fmt.Printf("Date:    %s\n", Date)
 		return
 	}
 
