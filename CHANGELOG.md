@@ -24,8 +24,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - READMEをCassetteOSように修正
 - GitHubActionをCassetteOSように見直し
 
-### Removed
+### 削除
 - CasaOSのスナップショット画像や固有のドキュメントを削除
+
+### 修正
+- sync.Mapを含む構造体の値コピーにより発生するgo vetエラーを修正
 
 ## [v0.4.15-cs1.2.0]
 ### Changed
