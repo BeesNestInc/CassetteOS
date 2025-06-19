@@ -1,9 +1,9 @@
 package drivers
 
 import (
-	_ "github.com/mayumigit/CasaOS/drivers/dropbox"
-	_ "github.com/mayumigit/CasaOS/drivers/google_drive"
-	_ "github.com/mayumigit/CasaOS/drivers/onedrive"
+	_ "github.com/BeesNestInc/CassetteOS/drivers/dropbox"
+	_ "github.com/BeesNestInc/CassetteOS/drivers/google_drive"
+	_ "github.com/BeesNestInc/CassetteOS/drivers/onedrive"
 )
 
 // All do nothing,just for import

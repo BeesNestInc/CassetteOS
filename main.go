@@ -1,5 +1,5 @@
-//go:generate bash -c "mkdir -p codegen && go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.12.4 -generate types,server,spec -package codegen api/casaos/openapi.yaml > codegen/casaos_api.go"
-//go:generate bash -c "mkdir -p codegen/message_bus && go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.12.4 -generate types,client -package message_bus https://raw.githubusercontent.com/IceWhaleTech/CasaOS-MessageBus/main/api/message_bus/openapi.yaml > codegen/message_bus/api.go"
+//go:generate bash -c "mkdir -p codegen && go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.12.4 -generate types,server,spec -package codegen api/cassetteos/openapi.yaml > codegen/cassetteos_api.go"
+//go:generate bash -c "mkdir -p codegen/message_bus && go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.12.4 -generate types,client -package message_bus https://raw.githubusercontent.com/BeesNestInc/CassetteOS-MessageBus/main/api/message_bus/openapi.yaml > codegen/message_bus/api.go"
 package main
 
 import (
@@ -12,20 +12,20 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/mayumigit/CasaOS-Common/model"
-	"github.com/mayumigit/CasaOS-Common/utils/command"
-	"github.com/mayumigit/CasaOS-Common/utils/constants"
-	"github.com/mayumigit/CasaOS-Common/utils/logger"
+	"github.com/BeesNestInc/CassetteOS-Common/model"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/command"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/constants"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/logger"
 
-	util_http "github.com/mayumigit/CasaOS-Common/utils/http"
+	util_http "github.com/BeesNestInc/CassetteOS-Common/utils/http"
 
-	"github.com/mayumigit/CasaOS/common"
-	"github.com/mayumigit/CasaOS/pkg/cache"
-	"github.com/mayumigit/CasaOS/pkg/config"
-	"github.com/mayumigit/CasaOS/pkg/sqlite"
-	"github.com/mayumigit/CasaOS/pkg/utils/file"
-	"github.com/mayumigit/CasaOS/route"
-	"github.com/mayumigit/CasaOS/service"
+	"github.com/BeesNestInc/CassetteOS/common"
+	"github.com/BeesNestInc/CassetteOS/pkg/cache"
+	"github.com/BeesNestInc/CassetteOS/pkg/config"
+	"github.com/BeesNestInc/CassetteOS/pkg/sqlite"
+	"github.com/BeesNestInc/CassetteOS/pkg/utils/file"
+	"github.com/BeesNestInc/CassetteOS/route"
+	"github.com/BeesNestInc/CassetteOS/service"
 	"github.com/coreos/go-systemd/daemon"
 	"go.uber.org/zap"
 
@@ -44,21 +44,27 @@ var (
 	//go:embed api/index.html
 	_docHTML string
 
-	//go:embed api/casaos/openapi.yaml
+	//go:embed api/cassetteos/openapi.yaml
 	_docYAML string
 
-	//go:embed build/sysroot/etc/casaos/casaos.conf.sample
+	//go:embed build/sysroot/etc/cassetteos/cassetteos.conf.sample
 	_confSample string
 
 	configFlag  = flag.String("c", "", "config address")
 	dbFlag      = flag.String("db", "", "db path")
 	versionFlag = flag.Bool("v", false, "version")
+	Version string
+	Commit  string
+	Date    string
 )
 
 func init() {
 	flag.Parse()
 	if *versionFlag {
 		fmt.Println("v" + common.VERSION)
+		fmt.Printf("Version: %s\n", Version)
+		fmt.Printf("Commit:  %s\n", Commit)
+		fmt.Printf("Date:    %s\n", Date)
 		return
 	}
 

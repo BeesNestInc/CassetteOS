@@ -1,3 +1,5 @@
+github.com/BeesNestInc/CassetteOS-Common v0.4.15-alpha1-cs1.1.2 h1:27ghKLCKORs7LBZDQzYapM3/q/u95IA/XWJqiNDMmuo=
+github.com/BeesNestInc/CassetteOS-Common v0.4.15-alpha1-cs1.1.2/go.mod h1:PgzzljH4MsqqaUi9NCRDRwNYqCnVlYUQE1RyrW+cx6o=
 github.com/Curtis-Milo/nat-type-identifier-go v0.0.0-20220215191915-18d42168c63d h1:62lEBImTxZ83pgzywgDNIrPPuQ+j4ep9QjqrWBn1hrU=
 github.com/Curtis-Milo/nat-type-identifier-go v0.0.0-20220215191915-18d42168c63d/go.mod h1:lW9x+yEjqKdPbE3+cf2fGPJXCw/hChX3Omi9QHTLFsQ=
 github.com/RaveNoX/go-jsoncommentstrip v1.0.0/go.mod h1:78ihd09MekBnJnxpICcwzCMzGrKSKYe4AqU6PDYYpjk=
@@ -181,8 +183,6 @@ github.com/mattn/go-colorable v0.1.13/go.mod h1:7S9/ev0klgBDR4GtXTXX8a3vIGJpMovk
 github.com/mattn/go-isatty v0.0.16/go.mod h1:kYGgaQfpe5nmfYZH+SKPsOc2e4SrIfOl2e/yFXSvRLM=
 github.com/mattn/go-isatty v0.0.20 h1:xfD0iDuEKnDkl03q4limB+vH+GxLEtL/jb4xVJSWWEY=
 github.com/mattn/go-isatty v0.0.20/go.mod h1:W+V8PltTTMOvKvAeJH7IuucS94S2C6jfK/D7dTCTo3Y=
-github.com/mayumigit/CasaOS-Common v0.4.15-alpha1-cs1.0.0 h1:567Mi4CeHU5/9zetpeoY68R5vzKW19y9bhxE6ATuVgs=
-github.com/mayumigit/CasaOS-Common v0.4.15-alpha1-cs1.0.0/go.mod h1:JNU5I/uI779oINwjsRFP+OyrTS7/Xseuww+GHmFrcQs=
 github.com/mholt/archiver/v3 v3.5.1 h1:rDjOBX9JSF5BvoJGvjqK479aL70qh9DIpZCl+k7Clwo=
 github.com/mholt/archiver/v3 v3.5.1/go.mod h1:e3dqJ7H78uzsRSEACH1joayhuSyhnonssnDhppzS1L4=
 github.com/mileusna/useragent v1.2.1 h1:p3RJWhi3LfuI6BHdddojREyK3p6qX67vIfOVMnUIVr0=

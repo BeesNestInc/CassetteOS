@@ -13,11 +13,11 @@
 
 set -e
 
-APP_NAME="casaos"
+APP_NAME="cassetteos"
 
 # copy config files
-CONF_PATH=/etc/casaos
-OLD_CONF_PATH=/etc/casaos.conf
+CONF_PATH=/etc/cassetteos
+OLD_CONF_PATH=/etc/cassetteos.conf
 CONF_FILE=${CONF_PATH}/${APP_NAME}.conf
 CONF_FILE_SAMPLE=${CONF_PATH}/${APP_NAME}.conf.sample
 
@@ -31,7 +31,7 @@ if [ ! -f "${CONF_FILE}" ]; then
     cp -v "${CONF_FILE_SAMPLE}" "${CONF_FILE}"
 fi
 
-rm -rf /etc/systemd/system/casaos.service # remove old service file
+rm -rf /etc/systemd/system/cassetteos.service # remove old service file
 
 systemctl daemon-reload
 

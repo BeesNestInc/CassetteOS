@@ -11,7 +11,7 @@
 package service
 
 import (
-	model2 "github.com/mayumigit/CasaOS/service/model"
+	model2 "github.com/BeesNestInc/CassetteOS/service/model"
 	"gorm.io/gorm"
 )
 

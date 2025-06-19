@@ -3,7 +3,7 @@ package service
 import (
 	"testing"
 
-	"github.com/mayumigit/CasaOS-Common/utils/logger"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/logger"
 	"go.uber.org/goleak"
 )
 

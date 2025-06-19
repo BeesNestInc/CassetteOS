@@ -3,7 +3,7 @@ package driver
 import (
 	"context"
 
-	"github.com/mayumigit/CasaOS/model"
+	"github.com/BeesNestInc/CassetteOS/model"
 )
 
 type Driver interface {

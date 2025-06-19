@@ -18,17 +18,17 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/mayumigit/CasaOS-Common/utils/logger"
-	"github.com/mayumigit/CasaOS-Common/utils/systemctl"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/logger"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/systemctl"
 	"github.com/labstack/echo/v4"
 	"go.uber.org/zap"
 
-	"github.com/mayumigit/CasaOS/model"
-	"github.com/mayumigit/CasaOS/pkg/samba"
-	"github.com/mayumigit/CasaOS/pkg/utils/common_err"
-	"github.com/mayumigit/CasaOS/pkg/utils/file"
-	"github.com/mayumigit/CasaOS/service"
-	model2 "github.com/mayumigit/CasaOS/service/model"
+	"github.com/BeesNestInc/CassetteOS/model"
+	"github.com/BeesNestInc/CassetteOS/pkg/samba"
+	"github.com/BeesNestInc/CassetteOS/pkg/utils/common_err"
+	"github.com/BeesNestInc/CassetteOS/pkg/utils/file"
+	"github.com/BeesNestInc/CassetteOS/service"
+	model2 "github.com/BeesNestInc/CassetteOS/service/model"
 )
 
 // service

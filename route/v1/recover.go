@@ -7,11 +7,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mayumigit/CasaOS-Common/utils/logger"
-	"github.com/mayumigit/CasaOS/drivers/dropbox"
-	"github.com/mayumigit/CasaOS/drivers/google_drive"
-	"github.com/mayumigit/CasaOS/drivers/onedrive"
-	"github.com/mayumigit/CasaOS/service"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/logger"
+	"github.com/BeesNestInc/CassetteOS/drivers/dropbox"
+	"github.com/BeesNestInc/CassetteOS/drivers/google_drive"
+	"github.com/BeesNestInc/CassetteOS/drivers/onedrive"
+	"github.com/BeesNestInc/CassetteOS/service"
 	"github.com/labstack/echo/v4"
 	"go.uber.org/zap"
 )

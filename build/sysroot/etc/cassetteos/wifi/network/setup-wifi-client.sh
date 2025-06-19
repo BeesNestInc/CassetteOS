@@ -10,7 +10,7 @@ log="logger -t setup-wifi-client.sh -s "
 SSID="$1"
 PASSWORD="$2"
 INTERFACE=$(iw dev | awk '$1=="Interface"{print $2}')
-CONFIG_DIR="/usr/share/casaos/shell"
+CONFIG_DIR="/usr/share/cassetteos/shell"
 
 if [ -f /etc/wpa_supplicant/wpa_supplicant-${INTERFACE}.conf ]; then
     mv /etc/wpa_supplicant/wpa_supplicant-${INTERFACE}.conf /etc/wpa_supplicant/wpa_supplicant-${INTERFACE}.conf.old

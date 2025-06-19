@@ -14,11 +14,11 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/mayumigit/CasaOS-Common/utils/command"
-	"github.com/mayumigit/CasaOS/pkg/config"
-	"github.com/mayumigit/CasaOS/pkg/utils/file"
-	"github.com/mayumigit/CasaOS/service/model"
-	model2 "github.com/mayumigit/CasaOS/service/model"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/command"
+	"github.com/BeesNestInc/CassetteOS/pkg/config"
+	"github.com/BeesNestInc/CassetteOS/pkg/utils/file"
+	"github.com/BeesNestInc/CassetteOS/service/model"
+	model2 "github.com/BeesNestInc/CassetteOS/service/model"
 	"gorm.io/gorm"
 )
 
