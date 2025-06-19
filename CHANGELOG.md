@@ -15,6 +15,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## []
+
+### 変更
+- モジュールパスなどを修正。  
+  (e.g., `github.com/mayumigit/CasaOS` → `github.com/BeesNestInc/CassetteOS`)
+- まだCasaOS固有部分は残された状態ではあるが、動作することを優先してあえてそのままにしてあります。
+- READMEをCassetteOSように修正
+- GitHubActionをCassetteOSように見直し
+
+### Removed
+- CasaOSのスナップショット画像や固有のドキュメントを削除
+
 ## [v0.4.15-cs1.2.0]
 ### Changed
 - Switched version update check to custom CassetteOS update server.
