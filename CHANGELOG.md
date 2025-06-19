@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
-## []
+## [v0.4.15-cs1.3.1]
 
 ### 修正
 - goreleaserから使用しないクラウドドライブのための関連のビルド時フラグを削除
