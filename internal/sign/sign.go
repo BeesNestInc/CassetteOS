@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/mayumigit/CasaOS/pkg/sign"
+	"github.com/BeesNestInc/CassetteOS/pkg/sign"
 )
 
 var once sync.Once

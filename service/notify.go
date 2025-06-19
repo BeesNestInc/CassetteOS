@@ -8,12 +8,12 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/mayumigit/CasaOS-Common/utils/logger"
-	"github.com/mayumigit/CasaOS/common"
-	model2 "github.com/mayumigit/CasaOS/model"
-	"github.com/mayumigit/CasaOS/model/notify"
-	"github.com/mayumigit/CasaOS/service/model"
-	"github.com/mayumigit/CasaOS/types"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/logger"
+	"github.com/BeesNestInc/CassetteOS/common"
+	model2 "github.com/BeesNestInc/CassetteOS/model"
+	"github.com/BeesNestInc/CassetteOS/model/notify"
+	"github.com/BeesNestInc/CassetteOS/service/model"
+	"github.com/BeesNestInc/CassetteOS/types"
 	"go.uber.org/zap"
 	"golang.org/x/sync/syncmap"
 

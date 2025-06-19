@@ -4,9 +4,9 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/mayumigit/CasaOS/internal/conf"
+	"github.com/BeesNestInc/CassetteOS/internal/conf"
 
-	"github.com/mayumigit/CasaOS/internal/driver"
+	"github.com/BeesNestInc/CassetteOS/internal/driver"
 	"github.com/pkg/errors"
 )
 

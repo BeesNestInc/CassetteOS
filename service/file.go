@@ -19,9 +19,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/mayumigit/CasaOS-Common/utils/logger"
-	"github.com/mayumigit/CasaOS/model"
-	"github.com/mayumigit/CasaOS/pkg/utils/file"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/logger"
+	"github.com/BeesNestInc/CassetteOS/model"
+	"github.com/BeesNestInc/CassetteOS/pkg/utils/file"
 	"github.com/moby/sys/mountinfo"
 	"go.uber.org/zap"
 )

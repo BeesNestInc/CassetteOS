@@ -15,17 +15,17 @@ import (
 	"fmt"
 	"os"
 
-	interfaces "github.com/mayumigit/CasaOS-Common"
-	"github.com/mayumigit/CasaOS-Common/utils/systemctl"
-	"github.com/mayumigit/CasaOS/common"
-	"github.com/mayumigit/CasaOS/pkg/config"
-	"github.com/mayumigit/CasaOS/pkg/sqlite"
-	"github.com/mayumigit/CasaOS/service"
+	interfaces "github.com/BeesNestInc/CassetteOS-Common"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/systemctl"
+	"github.com/BeesNestInc/CassetteOS/common"
+	"github.com/BeesNestInc/CassetteOS/pkg/config"
+	"github.com/BeesNestInc/CassetteOS/pkg/sqlite"
+	"github.com/BeesNestInc/CassetteOS/service"
 	"gorm.io/gorm"
 )
 
 const (
-	casaosServiceName = "casaos.service"
+	casaosServiceName = "cassetteos.service"
 )
 
 var (

@@ -3,9 +3,9 @@ package service
 import (
 	"io/ioutil"
 
-	"github.com/mayumigit/CasaOS-Common/utils/logger"
-	"github.com/mayumigit/CasaOS/pkg/utils/file"
-	"github.com/mayumigit/CasaOS/pkg/utils/httper"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/logger"
+	"github.com/BeesNestInc/CassetteOS/pkg/utils/file"
+	"github.com/BeesNestInc/CassetteOS/pkg/utils/httper"
 	"go.uber.org/zap"
 )
 

@@ -13,17 +13,17 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mayumigit/CasaOS-Common/utils/command"
-	exec2 "github.com/mayumigit/CasaOS-Common/utils/exec"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/command"
+	exec2 "github.com/BeesNestInc/CassetteOS-Common/utils/exec"
 
-	"github.com/mayumigit/CasaOS-Common/utils/file"
-	"github.com/mayumigit/CasaOS-Common/utils/logger"
-	"github.com/mayumigit/CasaOS/common"
-	"github.com/mayumigit/CasaOS/model"
-	"github.com/mayumigit/CasaOS/pkg/config"
-	"github.com/mayumigit/CasaOS/pkg/utils/common_err"
-	"github.com/mayumigit/CasaOS/pkg/utils/httper"
-	"github.com/mayumigit/CasaOS/pkg/utils/ip_helper"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/file"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/logger"
+	"github.com/BeesNestInc/CassetteOS/common"
+	"github.com/BeesNestInc/CassetteOS/model"
+	"github.com/BeesNestInc/CassetteOS/pkg/config"
+	"github.com/BeesNestInc/CassetteOS/pkg/utils/common_err"
+	"github.com/BeesNestInc/CassetteOS/pkg/utils/httper"
+	"github.com/BeesNestInc/CassetteOS/pkg/utils/ip_helper"
 	"github.com/tidwall/gjson"
 	"go.uber.org/zap"
 
@@ -122,7 +122,7 @@ func (c *systemService) GetDeviceInfo() model.DeviceInfo {
 }
 
 func (c *systemService) GenreateSystemEntry() {
-	modelsPath := "/var/lib/casaos/www/modules"
+	modelsPath := "/var/lib/cassetteos/www/modules"
 	entryFileName := "entry.json"
 	entryFilePath := filepath.Join(config.AppInfo.DBPath, "db", entryFileName)
 	file.IsNotExistCreateFile(entryFilePath)
@@ -151,7 +151,7 @@ func (c *systemService) GenreateSystemEntry() {
 }
 
 func (c *systemService) GetSystemEntry() string {
-	modelsPath := "/var/lib/casaos/www/modules"
+	modelsPath := "/var/lib/cassetteos/www/modules"
 	entryFileName := "entry.json"
 	dir, err := os.ReadDir(modelsPath)
 	if err != nil {

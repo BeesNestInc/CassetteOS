@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/mayumigit/CasaOS/service"
-	"github.com/mayumigit/CasaOS/types"
+	"github.com/BeesNestInc/CassetteOS/service"
+	"github.com/BeesNestInc/CassetteOS/types"
 	"github.com/gorilla/websocket"
 	"github.com/labstack/echo/v4"
 )

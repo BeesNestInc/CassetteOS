@@ -6,9 +6,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/mayumigit/CasaOS/codegen"
-	"github.com/mayumigit/CasaOS/pkg/utils/file"
-	"github.com/mayumigit/CasaOS/service"
+	"github.com/BeesNestInc/CassetteOS/codegen"
+	"github.com/BeesNestInc/CassetteOS/pkg/utils/file"
+	"github.com/BeesNestInc/CassetteOS/service"
 	"github.com/labstack/echo/v4"
 	"github.com/mholt/archiver/v3"
 )
@@ -50,7 +50,7 @@ func (c *CasaOS) GetHealthlogs(ctx echo.Context) error {
 	var name, currentPath, commonDir, extension string
 	var err error
 	var ar archiver.Writer
-	fileList, err := os.ReadDir("/var/log/casaos")
+	fileList, err := os.ReadDir("/var/log/cassetteos")
 	if err != nil {
 		message := err.Error()
 		return ctx.JSON(http.StatusInternalServerError, codegen.ResponseInternalServerError{
@@ -75,7 +75,7 @@ func (c *CasaOS) GetHealthlogs(ctx echo.Context) error {
 	}
 	defer ar.Close()
 
-	commonDir = "/var/log/casaos"
+	commonDir = "/var/log/cassetteos"
 
 	currentPath = filepath.Base(commonDir)
 
@@ -87,7 +87,7 @@ func (c *CasaOS) GetHealthlogs(ctx echo.Context) error {
 	ctx.Response().Header().Add("Content-Disposition", "attachment; filename*=utf-8''"+url.PathEscape(name))
 
 	for _, fname := range fileList {
-		err := file.AddFile(ar, filepath.Join("/var/log/casaos", fname.Name()), commonDir)
+		err := file.AddFile(ar, filepath.Join("/var/log/cassetteos", fname.Name()), commonDir)
 		if err != nil {
 			message := err.Error()
 			return ctx.JSON(http.StatusInternalServerError, codegen.ResponseInternalServerError{

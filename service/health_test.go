@@ -3,7 +3,7 @@ package service_test
 import (
 	"testing"
 
-	"github.com/mayumigit/CasaOS/service"
+	"github.com/BeesNestInc/CassetteOS/service"
 	"github.com/stretchr/testify/assert"
 )
 

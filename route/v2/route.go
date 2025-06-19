@@ -1,8 +1,8 @@
 package v2
 
 import (
-	"github.com/mayumigit/CasaOS/codegen"
-	"github.com/mayumigit/CasaOS/service"
+	"github.com/BeesNestInc/CassetteOS/codegen"
+	"github.com/BeesNestInc/CassetteOS/service"
 )
 
 type CasaOS struct {

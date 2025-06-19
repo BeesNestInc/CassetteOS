@@ -3,8 +3,8 @@ package v2
 import (
 	"net/http"
 	"github.com/labstack/echo/v4"
-	"github.com/mayumigit/CasaOS/service"
-	"github.com/mayumigit/CasaOS/codegen"
+	"github.com/BeesNestInc/CassetteOS/service"
+	"github.com/BeesNestInc/CassetteOS/codegen"
 	"fmt"
 )
 

@@ -18,8 +18,8 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/mayumigit/CasaOS/model"
-	"github.com/mayumigit/CasaOS/service"
+	"github.com/BeesNestInc/CassetteOS/model"
+	"github.com/BeesNestInc/CassetteOS/service"
 )
 
 func SendAllHardwareStatusBySocket() {

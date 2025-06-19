@@ -1,7 +1,7 @@
 package main
 
 import (
-	interfaces "github.com/mayumigit/CasaOS-Common"
+	interfaces "github.com/BeesNestInc/CassetteOS-Common"
 )
 
 type migrationTool struct{}

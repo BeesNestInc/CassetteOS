@@ -1,12 +1,12 @@
 #!/bin/bash
 set -a
-. /etc/casaos/env
+. /etc/cassetteos/env
 set +a
 
 INTERFACE=$(iw dev | awk '$1=="Interface"{print $2}')
-NETWORK_TEMPLATE="/etc/casaos/wifi/network/10-ap.network.template"
+NETWORK_TEMPLATE="/etc/cassetteos/wifi/network/10-ap.network.template"
 NETWORK_TARGET="/etc/systemd/network/10-ap.network"
-RESOLV_SOURCE="/etc/casaos/wifi/resolv/resolv-ap.conf"
+RESOLV_SOURCE="/etc/cassetteos/wifi/resolv/resolv-ap.conf"
 RESOLV_TARGET="/etc/resolv.conf"
 AP_NETWORK_FILE="/etc/systemd/network/10-ap.network"
 CLIENT_NETWORK_FILE="/etc/systemd/network/10-wifi.network"

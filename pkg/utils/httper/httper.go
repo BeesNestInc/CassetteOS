@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/mayumigit/CasaOS/pkg/config"
+	"github.com/BeesNestInc/CassetteOS/pkg/config"
 	"github.com/tidwall/gjson"
 )
 

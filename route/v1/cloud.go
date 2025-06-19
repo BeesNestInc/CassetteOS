@@ -3,14 +3,14 @@ package v1
 import (
 	"strings"
 
-	"github.com/mayumigit/CasaOS-Common/utils/logger"
-	"github.com/mayumigit/CasaOS/drivers/dropbox"
-	"github.com/mayumigit/CasaOS/drivers/google_drive"
-	"github.com/mayumigit/CasaOS/drivers/onedrive"
-	"github.com/mayumigit/CasaOS/model"
-	"github.com/mayumigit/CasaOS/pkg/utils/common_err"
-	"github.com/mayumigit/CasaOS/pkg/utils/httper"
-	"github.com/mayumigit/CasaOS/service"
+	"github.com/BeesNestInc/CassetteOS-Common/utils/logger"
+	"github.com/BeesNestInc/CassetteOS/drivers/dropbox"
+	"github.com/BeesNestInc/CassetteOS/drivers/google_drive"
+	"github.com/BeesNestInc/CassetteOS/drivers/onedrive"
+	"github.com/BeesNestInc/CassetteOS/model"
+	"github.com/BeesNestInc/CassetteOS/pkg/utils/common_err"
+	"github.com/BeesNestInc/CassetteOS/pkg/utils/httper"
+	"github.com/BeesNestInc/CassetteOS/service"
 	"github.com/labstack/echo/v4"
 	"go.uber.org/zap"
 )

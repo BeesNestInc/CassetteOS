@@ -1,7 +1,7 @@
 package onedrive
 
 import (
-	"github.com/mayumigit/CasaOS/internal/driver"
+	"github.com/BeesNestInc/CassetteOS/internal/driver"
 )
 
 const ICONURL = "./img/driver/OneDrive.svg"
