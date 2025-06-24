@@ -5,7 +5,7 @@ set +a
 
 INTERFACE=$(iw dev | awk '$1=="Interface"{print $2}')
 WPA_CONF_PATH="/etc/wpa_supplicant/wpa_supplicant-${INTERFACE}.conf"
-WPA_TEMPLATE="/etc/cassetteos/wifi/templates/wpa_supplicant.conf.template"
+WPA_TEMPLATE="/etc/cassetteos/wifi/wpa_supplicant.conf.template"
 NETWORK_TEMPLATE="/etc/cassetteos/wifi/network/10-wifi.network.template"
 NETWORK_TARGET="/etc/systemd/network/10-wifi.network"
 RESOLV_SOURCE="/etc/cassetteos/wifi/resolv/resolv-client.conf"
