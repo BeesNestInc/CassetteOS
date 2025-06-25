@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
-## [unreleased]
+## [v0.4.15-cs1.3.3]
 ### Changed
 - セットアップスクリプトやそのフォルダ名をCasaOSからCassetteOSへ変更
 - インストール時のマイグレーションスクリプトは不要だと判断しているが、まだ削除まではしていない。(build/scripts/migration)
