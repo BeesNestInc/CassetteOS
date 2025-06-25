@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
-## [Unreleased]
+## [v0.4.15-cs1.3.2]
 ### Changed
 - OpenAPI上のWiFiAPIの定義で使用している`client`がほかのリポジトリと衝突していたため`wifi-client`に修正した
 
