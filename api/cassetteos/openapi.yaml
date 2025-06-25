@@ -376,7 +376,7 @@ components:
         mode:
           type: string
           description: WiFi mode to switch to
-          enum: [client, ap]
+          enum: [wifi-client, ap]
         ssid:
           type: string
           description: SSID to connect to (only in client mode)
