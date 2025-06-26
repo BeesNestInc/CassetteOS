@@ -38,7 +38,7 @@ func InitV1Router() http.Handler {
 	e.GET("/ping", func(ctx echo.Context) error {
 		return ctx.String(200, "pong")
 	})
-	e.GET("/v1/recover/:type", v1.GetRecoverStorage)
+	//e.GET("/v1/recover/:type", v1.GetRecoverStorage)
 	v1Group := e.Group("/v1")
 	v1Group.Use(echo_middleware.JWTWithConfig(echo_middleware.JWTConfig{
 		Skipper: func(c echo.Context) bool {
@@ -125,8 +125,8 @@ func InitV1Router() http.Handler {
 		v1CloudGroup := v1Group.Group("/cloud")
 		v1CloudGroup.Use()
 		{
-			v1CloudGroup.GET("", v1.ListStorages)
-			v1CloudGroup.DELETE("", v1.UmountStorage)
+//			v1CloudGroup.GET("", v1.ListStorages)
+//			v1CloudGroup.DELETE("", v1.UmountStorage)
 		}
 		v1DriverGroup := v1Group.Group("/driver")
 		v1DriverGroup.Use()
