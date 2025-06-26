@@ -100,9 +100,9 @@ func InitNetworkMount() {
 		connection.Directories = strings.Join(directories, ",")
 		service.MyService.Connections().UpdateConnection(&connection)
 	}
-	err := service.MyService.Storage().CheckAndMountAll()
+	/*err := service.MyService.Storage().CheckAndMountAll()
 	if err != nil {
 		logger.Error("mount storage err", zap.Any("err", err))
-	}
+	}*/
 }
 

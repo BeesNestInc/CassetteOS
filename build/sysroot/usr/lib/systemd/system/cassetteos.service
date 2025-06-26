@@ -1,6 +1,5 @@
 [Unit]
 After=cassetteos-message-bus.service
-After=rclone.service
 Description=CasaOS Main Service
 
 [Service]
