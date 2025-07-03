@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [unreleased]
+### 削除
+- 使用しないクラウドドライブに関するコードを削除
+
 ## [v0.4.15-cs1.3.4]
 ### 削除
 - Rcloneを使用しない方針にしたため、関連するコードを削除
