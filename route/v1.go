@@ -122,18 +122,6 @@ func InitV1Router() http.Handler {
 			v1FileGroup.GET("/ws", v1.ConnectWebSocket)
 			v1FileGroup.GET("/peers", v1.GetPeers)
 		}
-		v1CloudGroup := v1Group.Group("/cloud")
-		v1CloudGroup.Use()
-		{
-//			v1CloudGroup.GET("", v1.ListStorages)
-//			v1CloudGroup.DELETE("", v1.UmountStorage)
-		}
-		v1DriverGroup := v1Group.Group("/driver")
-		v1DriverGroup.Use()
-		{
-			v1DriverGroup.GET("", v1.ListDriverInfo)
-		}
-
 		v1FolderGroup := v1Group.Group("/folder")
 		v1FolderGroup.Use()
 		{

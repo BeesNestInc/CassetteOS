@@ -146,7 +146,6 @@ func main() {
 		"/v1/samba",
 		"/v1/notify",
 		"/v1/driver",
-		"/v1/cloud",
 		"/v1/recover",
 		"/v1/other",
 		"/v1/zt",
