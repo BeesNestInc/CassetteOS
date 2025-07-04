@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
-## [unreleased]
+## [v0.4.15-cs1.3.6]
 - ファイル名、フォルダ名にCasaOSが残っているのを修正
 
 ## [v0.4.15-cs1.3.5]
