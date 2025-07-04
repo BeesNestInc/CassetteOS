@@ -15,6 +15,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [unreleased]
+- ファイル名、フォルダ名にCasaOSが残っているのを修正
+
 ## [v0.4.15-cs1.3.5]
 ### 削除
 - 使用しないクラウドドライブに関するコードを削除
