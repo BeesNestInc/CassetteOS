@@ -3,7 +3,7 @@ module github.com/BeesNestInc/CassetteOS
 go 1.21
 
 require (
-	github.com/BeesNestInc/CassetteOS-Common v0.4.15-alpha1-cs1.1.2
+	github.com/BeesNestInc/CassetteOS-Common v0.0.2
 	github.com/Curtis-Milo/nat-type-identifier-go v0.0.0-20220215191915-18d42168c63d
 	github.com/coreos/go-systemd v0.0.0-20191104093116-d3cd4ed1dbcf
 	github.com/deckarep/golang-set/v2 v2.3.0
