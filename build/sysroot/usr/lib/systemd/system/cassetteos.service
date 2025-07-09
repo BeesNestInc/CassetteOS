@@ -1,0 +1,12 @@
+[Unit]
+After=cassetteos-message-bus.service
+Description=CasaOS Main Service
+
+[Service]
+ExecStart=/usr/bin/cassetteos -c /etc/cassetteos/cassetteos.conf
+PIDFile=/var/run/cassetteos/cassetteos.pid
+Restart=always
+Type=notify
+
+[Install]
+WantedBy=multi-user.target
