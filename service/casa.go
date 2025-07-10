@@ -3,7 +3,7 @@ package service
 import (
 	json2 "encoding/json"
 	"time"
-
+	"fmt"
 	"github.com/BeesNestInc/CassetteOS/model"
 	"github.com/BeesNestInc/CassetteOS/pkg/config"
 	"github.com/BeesNestInc/CassetteOS/pkg/utils/httper"
@@ -33,13 +33,26 @@ func (o *casaService) GetCasaosVersion() model.Version {
 		}
 	}
 
-	v := httper.Get(config.ServerInfo.ServerApi + "/v1/sys/version", nil)
+	v := httper.GetWithTLS(config.ServerInfo.ServerApi + "/v1/sys/version", nil,"api.cassetteos.com")
+	if !gjson.Valid(v) {
+		fmt.Println("⚠️ 無効なJSONレスポンス:", v)
+		return model.Version{}
+	}
+
+	code := gjson.Get(v, "code").Int()
+	if code != 200 && code != 0 {
+		fmt.Println("⚠️ バージョン取得失敗: ", v)
+		return model.Version{}
+	}
+
 	data := gjson.Get(v, "data")
-	json2.Unmarshal([]byte(data.String()), &version)
+	if err := json2.Unmarshal([]byte(data.Raw), &version); err != nil {
+		fmt.Println("⚠️ JSONデコード失敗:", err)
+		return model.Version{}
+	}
 	if len(version.Version) > 0 {
 		Cache.Set(keyName, v, time.Minute*20)
 	}
-
 	return version
 }
 
