@@ -5,7 +5,6 @@ import (
 	"time"
 	"fmt"
 	"github.com/BeesNestInc/CassetteOS/model"
-	"github.com/BeesNestInc/CassetteOS/pkg/config"
 	"github.com/BeesNestInc/CassetteOS/pkg/utils/httper"
 	"github.com/tidwall/gjson"
 )
@@ -16,6 +15,11 @@ type CasaService interface {
 
 type casaService struct{}
 
+type GitHubRelease struct {
+	TagName string `json:"tag_name"`
+	Name    string `json:"name"`
+	Body    string `json:"body"`
+}
 /**
  * @description: get remote version
  * @return {model.Version}
@@ -27,32 +31,32 @@ func (o *casaService) GetCasaosVersion() model.Version {
 	if result, ok := Cache.Get(keyName); ok {
 		dataStr, ok = result.(string)
 		if ok {
-			data := gjson.Get(dataStr, "data")
-			json2.Unmarshal([]byte(data.String()), &version)
-			return version
+			if err := json2.Unmarshal([]byte(dataStr), &version); err == nil {
+				return version
+			} else {
+				fmt.Println("⚠️ キャッシュのデコード失敗:", err)
+			}
 		}
 	}
-
-	v := httper.GetWithTLS(config.ServerInfo.ServerApi + "/v1/sys/version", nil,"api.cassetteos.com")
+	v := httper.Get("https://api.github.com/repos/BeesNestInc/CassetteOS-Tools/releases/latest", nil)
 	if !gjson.Valid(v) {
 		fmt.Println("⚠️ 無効なJSONレスポンス:", v)
 		return model.Version{}
 	}
 
-	code := gjson.Get(v, "code").Int()
-	if code != 200 && code != 0 {
-		fmt.Println("⚠️ バージョン取得失敗: ", v)
+	var githubRelease GitHubRelease
+	if err := json2.Unmarshal([]byte(v), &githubRelease); err != nil {
+		fmt.Println("⚠️ GitHubレスポqンスのデコード失敗:", err)
 		return model.Version{}
 	}
 
-	data := gjson.Get(v, "data")
-	if err := json2.Unmarshal([]byte(data.Raw), &version); err != nil {
-		fmt.Println("⚠️ JSONデコード失敗:", err)
-		return model.Version{}
-	}
+	version.Version = githubRelease.TagName
+	version.ChangeLog = githubRelease.Body
+
 	if len(version.Version) > 0 {
-		Cache.Set(keyName, v, time.Minute*20)
+		Cache.Set(keyName, version, time.Minute*20)
 	}
+
 	return version
 }
 
