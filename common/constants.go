@@ -1,7 +1,7 @@
 package common
 
-const (
+var (
 	SERVICENAME = "cassetteos"
 	BODY        = " "
+	VERSION     = "dev"
 )
-ver VERSION     = "dev"
