@@ -195,7 +195,7 @@ func main() {
 		}
 	}()
 
-	urlFilePath := filepath.Join(config.CommonInfo.RuntimePath, "casaos.url")
+	urlFilePath := filepath.Join(config.CommonInfo.RuntimePath, "cassetteos.url")
 	if err := file.CreateFileAndWriteContent(urlFilePath, "http://"+listener.Addr().String()); err != nil {
 		logger.Error("error when creating address file", zap.Error(err),
 			zap.Any("address", listener.Addr().String()),
