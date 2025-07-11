@@ -7,57 +7,10 @@ import (
 	"io/ioutil"
 	"net/http"
 	"time"
-	"crypto/tls"
 
 	"github.com/BeesNestInc/CassetteOS/pkg/config"
 	"github.com/tidwall/gjson"
 )
-
-func GetWithTLS (url string, head map[string]string, sniName string) (response string) {
-	client := &http.Client{ Timeout: 30 * time.Second,
-							Transport: &http.Transport{
-								TLSClientConfig: &tls.Config{
-									ServerName: sniName,
-								},
-							},}
-	req, err := http.NewRequest("GET", url, nil)
-
-	for k, v := range head {
-		req.Header.Add(k, v)
-	}
-
-	if err != nil {
-		return ""
-	}
-
-	resp, err := client.Do(req)
-
-	if err != nil {
-		fmt.Println(err)
-		// 需要错误日志的处理
-		// logger.Error(error)
-		return ""
-		// panic(error)
-	}
-
-	defer resp.Body.Close()
-
-	var buffer [512]byte
-	result := bytes.NewBuffer(nil)
-	for {
-		n, err := resp.Body.Read(buffer[0:])
-		result.Write(buffer[0:n])
-		if err != nil && err == io.EOF {
-			break
-		} else if err != nil {
-			// logger.Error(err)
-			return ""
-			//	panic(err)
-		}
-	}
-	response = result.String()
-	return
-}
 // 发送GET请求
 // url:请求地址
 // response:请求返回的内容
