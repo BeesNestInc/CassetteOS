@@ -38,7 +38,7 @@ func (o *casaService) GetCasaosVersion() model.Version {
 			}
 		}
 	}
-	v := httper.Get("https://api.github.com/repos/BeesNestInc/CassetteOS-Tools/releases/latest", nil)
+	v := httper.Get("https://api.github.com/repos/BeesNestInc/CassetteOS/releases/latest", nil)
 	if !gjson.Valid(v) {
 		fmt.Println("⚠️ 無効なJSONレスポンス:", v)
 		return model.Version{}
