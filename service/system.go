@@ -381,10 +381,9 @@ func (s *systemService) UpdateSystemVersion(version string) {
 	if len(config.ServerInfo.UpdateUrl) > 0 {
 		go command.OnlyExec("curl -fsSL " + config.ServerInfo.UpdateUrl + " | bash")
 	} else {
-		osRelease, _ := file.ReadOSRelease()
-		go command.OnlyExec("curl -fsSL https://get.casaos.io/update?t=" + osRelease["MANUFACTURER"] + " | bash")
+		//osRelease, _ := file.ReadOSRelease()
+		go command.OnlyExec("curl -fsSL https://github.com/BeesNestInc/CassetteOS-Tools/releases/download/" + version + "/update.sh | sudo bash")
 	}
-
 	// s.log.Error(config.AppInfo.ProjectPath + "/shell/tool.sh -r " + version)
 	// s.log.Error(command2.ExecResultStr(config.AppInfo.ProjectPath + "/shell/tool.sh -r " + version))
 }

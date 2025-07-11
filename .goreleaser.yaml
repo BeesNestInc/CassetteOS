@@ -19,6 +19,8 @@ builds:
     ldflags:
       - -X main.commit={{.Commit}}
       - -X main.date={{.Date}}
+      - -X main.Version={{.Version}} 
+      - "-X github.com/BeesNestInc/CassetteOS/common.VERSION={{.Version}}"
       - -s
       - -w
       - -extldflags "-static"
@@ -41,6 +43,7 @@ builds:
       - -X main.commit={{.Commit}}
       - -X main.date={{.Date}}
       - -X main.Version={{.Version}} 
+      - "-X github.com/BeesNestInc/CassetteOS/common.VERSION={{.Version}}"
       - -s
       - -w
       - -extldflags "-static"
@@ -63,6 +66,7 @@ builds:
       - -X main.commit={{.Commit}}
       - -X main.date={{.Date}}
       - -X main.Version={{.Version}} 
+      - "-X github.com/BeesNestInc/CassetteOS/common.VERSION={{.Version}}"
       - -s
       - -w
       - -extldflags "-static"
@@ -88,6 +92,7 @@ builds:
       - -X main.commit={{.Commit}}
       - -X main.date={{.Date}}
       - -X main.Version={{.Version}} 
+      - "-X github.com/BeesNestInc/CassetteOS/common.VERSION={{.Version}}"
       - -s
       - -w
       - -extldflags "-static"
@@ -111,6 +116,7 @@ builds:
       - -X main.commit={{.Commit}}
       - -X main.date={{.Date}}
       - -X main.Version={{.Version}} 
+      - "-X github.com/BeesNestInc/CassetteOS/common.VERSION={{.Version}}"
       - -s
       - -w
       - -extldflags "-static"
@@ -134,6 +140,7 @@ builds:
       - -X main.commit={{.Commit}}
       - -X main.date={{.Date}}
       - -X main.Version={{.Version}} 
+      - "-X github.com/BeesNestInc/CassetteOS/common.VERSION={{.Version}}"
       - -s
       - -w
       - -extldflags "-static"
@@ -188,7 +195,6 @@ release:
   github:
     owner: BeesNestInc
     name: CassetteOS
-  draft: true
-  prerelease: auto
+  prerelease: true
   mode: replace
   name_template: "v{{ .Version }}"

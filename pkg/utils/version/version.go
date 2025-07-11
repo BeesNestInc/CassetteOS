@@ -18,30 +18,22 @@ import (
 	"github.com/BeesNestInc/CassetteOS/model"
 )
 func ParseFullVersion(ver string) ([]int, error) {
-	// 例: "v0.4.18-cs1.0.0"
 	ver = strings.TrimPrefix(ver, "v")
+	parts := strings.Split(ver, ".")
 
-	parts := strings.Split(ver, "-cs")
-	if len(parts) != 2 {
-		return nil, fmt.Errorf("invalid version format")
+	if len(parts) != 3 {
+		return nil, fmt.Errorf("invalid version format: expected vMAJOR.MINOR.PATCH")
 	}
 
-	upstreamParts := strings.Split(parts[0], ".")
-	customParts := strings.Split(parts[1], ".")
-
-	if len(upstreamParts) != 3 || len(customParts) != 3 {
-		return nil, fmt.Errorf("version must have 3 upstream and 3 custom segments")
-	}
-
-	result := []int{}
-	for _, s := range append(upstreamParts, customParts...) {
+	result := make([]int, 3)
+	for i, s := range parts {
 		n, err := strconv.Atoi(s)
 		if err != nil {
-			return nil, err
+			return nil, fmt.Errorf("invalid number in version: %v", err)
 		}
-		result = append(result, n)
+		result[i] = n
 	}
-	return result, nil
+	return  result, nil
 }
 
 func IsNeedUpdate(version model.Version) (bool, model.Version) {
@@ -75,10 +67,12 @@ func IsNewerVersion(remote model.Version) (bool, error) {
 	if err != nil {
 		return false, err
 	}
+
 	lv, err := ParseFullVersion(common.VERSION)
 	if err != nil {
 		return false, err
 	}
+
 	for i := 0; i < len(rv); i++ {
 		if rv[i] > lv[i] {
 			return true, nil
@@ -87,5 +81,6 @@ func IsNewerVersion(remote model.Version) (bool, error) {
 			return false, nil
 		}
 	}
+
 	return false, nil 
 }

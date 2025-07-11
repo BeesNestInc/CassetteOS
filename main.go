@@ -70,6 +70,7 @@ func init() {
 
 	println("git commit:", commit)
 	println("build date:", date)
+	println("Tag:", common.VERSION)
 
 	config.InitSetup(*configFlag, _confSample)
 
