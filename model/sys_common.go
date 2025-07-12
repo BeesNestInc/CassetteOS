@@ -40,6 +40,8 @@ type APPModel struct {
 	DateFormat     string
 	DBPath         string
 	ShellPath      string
+	EnableWiFiSetup bool `ini:"EnableWifiSetup"`
+	EnableHostDB    bool `ini:"EnableHostDB"`
 }
 type CommonModel struct {
 	RuntimePath string
