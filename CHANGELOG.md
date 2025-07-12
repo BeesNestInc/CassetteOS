@@ -1,4 +1,4 @@
-## unreleased
+## v0.0.4
 - ディスク情報が取得できない不具合を修正
 - GetWiFiでWiFiの状態にAPのSSIDも返すようにした
 - APのSSIDを取得するAPIを追加
