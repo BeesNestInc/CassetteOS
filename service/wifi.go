@@ -5,6 +5,8 @@ import (
 	"github.com/BeesNestInc/CassetteOS/pkg/config"
 	"os/exec"
 	"strings"
+	"bufio"
+	"os"
 	//"errors"
 	"fmt"
 )
@@ -17,6 +19,7 @@ type WifiService interface {
 	WifiStatus() (*WifiStatus, error) 
 	SetupWiFi(ssid string, password string) error
 	SetupAPMode() error
+	GetAPSSID() (*string, error)
 }
 
 type wifi struct{}
@@ -32,9 +35,15 @@ func (s *wifi) WifiStatus()(*WifiStatus, error)  {
 		if err != nil {
 			return nil, err
 		}
+
+		ssid, err := _GetAPSSID()
+		if err != nil {
+			return nil, err
+		}
+
 		return &WifiStatus{
 			Mode:		"ap",
-			SSID:		"",
+			SSID:		ssid,
 			IPAddress:	ip,
 		}, nil
 	} else if isServiceActive("wpa_supplicant@" + interfaceName) {
@@ -84,7 +93,13 @@ func (s *wifi) SetupAPMode() error {
 	return nil
 
 }
-
+func (s *wifi) GetAPSSID()(*string, error)  {
+	ssid, err := _GetAPSSID()
+	if err != nil {
+		return nil, err
+	}
+	return &ssid, nil
+}
 func NewWifiService() WifiService {
 	return &wifi{}
 }
@@ -153,4 +168,27 @@ func getSSID(interfaceName string) (string, error) {
 	}
 
 	return "", nil
+}
+const hostapdConfPath = "/etc/hostapd/hostapd.conf"
+
+func _GetAPSSID() (string, error) {
+	file, err := os.Open(hostapdConfPath)
+	if err != nil {
+		return "", err
+	}
+	defer file.Close()
+
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		line := strings.TrimSpace(scanner.Text())
+		if strings.HasPrefix(line, "ssid=") {
+			return strings.TrimPrefix(line, "ssid="), nil
+		}
+	}
+
+	if err := scanner.Err(); err != nil {
+		return "", err
+	}
+
+	return "", os.ErrNotExist
 }

@@ -236,6 +236,44 @@ paths:
                       example: ok
           '500':
             description: Failed to switch to AP mode
+  /wifi/ap-ssid:
+      get:
+        summary: Get AP SSID
+        operationId: getWiFiAPSSID
+        tags:
+          - WiFi
+        responses:
+          '200':
+            description: Get AP SSID successfully
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    status:
+                      type: string
+                      example: ok
+          '500':
+            description: Failed to get AP SSID
+  /option:
+      get:
+        summary: Get option status
+        operationId: getOptionStatus
+        tags:
+          - Option
+        responses:
+          '200':
+            description: Get Option status successfully
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    status:
+                      type: string
+                      example: ok
+          '500':
+            description: Failed to get option status
 components:
   securitySchemes:
     access_token:

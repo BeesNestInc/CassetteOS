@@ -11,6 +11,8 @@ DateFormat = 2006-01-02
 DBPath     = /var/lib/cassetteos
 ShellPath  = /usr/share/cassetteos/shell
 UserDataPath = /var/lib/cassetteos/conf
+EnableWifiSetup =
+EnableHostDB = 
 
 [server]
 RunMode = release

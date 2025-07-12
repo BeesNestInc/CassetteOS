@@ -49,3 +49,15 @@ func (c *CasaOS) SetWiFiAPMode(ctx echo.Context) error {
 	}
 	return ctx.JSON(http.StatusOK, map[string]string{"status": "ok"})
 }
+
+func (c *CasaOS) GetWiFiAPSSID(ctx echo.Context) error {
+	fmt.Println("🍀 GetWiFiAPSSID was called!")
+	status, err :=  service.MyService.Wifi().GetAPSSID()
+	if err != nil {
+		message := err.Error()
+		return ctx.JSON(http.StatusInternalServerError, codegen.ResponseInternalServerError{
+			Message: &message,
+		})
+	}
+	return ctx.JSON(http.StatusOK, status)
+}
