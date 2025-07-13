@@ -1,8 +1,4 @@
 #!/bin/bash
-set -a
-. /etc/cassetteos/env
-set +a
-
 INTERFACE=$(iw dev | awk '$1=="Interface"{print $2}')
 WPA_CONF_PATH="/etc/wpa_supplicant/wpa_supplicant-${INTERFACE}.conf"
 WPA_TEMPLATE="/etc/cassetteos/wifi/wpa_supplicant.conf.template"
