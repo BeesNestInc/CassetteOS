@@ -3,7 +3,7 @@
 
 # CassetteOS
 **未来オフィスのインフラ**  
-CassetteOSは、小規模チームやオフィス向けに最適化された業務サーバーOS。  
+CassetteOSは、小規模チームやオフィス向けに最適化されたサーバーOS。  
 必要なアプリをすぐに導入でき、外部サービスに依存しない運用が可能です。
 
 > ※このプロジェクトは [CasaOS](https://github.com/IceWhaleTech/CasaOS) をベースに開発されており、  
