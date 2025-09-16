@@ -21,6 +21,6 @@ CassetteOSは、小規模チームやオフィス向けに最適化されたサ�
 ## 🚀 インストール（Installation）
 
 ```bash
-wget -qO- https://github.com/BeesNestInc/CassetteOS-Tools/releases/download/v0.0.6/install.sh | sudo bash
+wget -qO- https://github.com/BeesNestInc/CassetteOS-Tools/releases/download/v0.0.9/install.sh | sudo bash
 ```
 
